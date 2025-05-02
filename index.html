@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JECA/2024/QUESTION-PAPER</title>
+    <!-- Prism.js CSS for code highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .instructions-section {
+            background-color: #f5f5f5;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .question {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+        .options label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+        code {
+            background-color: #f8f8f8;
+            padding: 2px 4px;
+        }
+        pre {
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .category-header {
+            background-color: #e0e0e0;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .container {
+        text-align: center;
+        }
+        
+        .rainbow-text {
+        font-size: 5rem;
+        font-weight: bold;
+        animation: rainbow 8s linear infinite;
+        text-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+        letter-spacing: 0.1em;
+        }
+        
+        .letter {
+        display: inline-block;
+        animation: bounce 2s infinite;
+        }
+        
+        .letter:nth-child(1) { 
+        color: #FF5252; 
+        animation-delay: 0.1s;
+        }
+        .letter:nth-child(2) { 
+        color: #FF9800; 
+        animation-delay: 0.2s;
+        }
+        .letter:nth-child(3) { 
+        color: #FFEB3B; 
+        animation-delay: 0.3s;
+        }
+        .letter:nth-child(4) { 
+        color: #4CAF50; 
+        animation-delay: 0.4s;
+        }
+        .letter:nth-child(5) { 
+        color: #2196F3; 
+        animation-delay: 0.5s;
+        }
+        .letter:nth-child(6) { 
+        color: #9C27B0; 
+        animation-delay: 0.6s;
+        }
+        .letter:nth-child(7) { 
+        color: #E91E63; 
+        animation-delay: 0.7s;
+        }
+        .letter:nth-child(8) { 
+        color: #00BCD4; 
+        animation-delay: 0.8s;
+        }
+        .letter:nth-child(9) { 
+        color: #FF4081; 
+        animation-delay: 0.9s;
+        }
+        
+        @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        }
+        
+        @keyframes rainbow {
+        0% {
+            filter: hue-rotate(0deg);
+        }
+        100% {
+            filter: hue-rotate(360deg);
+        }
+        }
+        
+        .sparkle {
+        position: absolute;
+        background-color: white;
+        border-radius: 50%;
+        opacity: 0;
+        animation: sparkle 1.5s infinite;
+        }
+        
+        @keyframes sparkle {
+        0% {
+            opacity: 0;
+            transform: scale(0);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(0);
+        }
+        }
+        .submit-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-button:hover {
+            background-color: #3fa544;
+        }
+    </style>
+</head>
+<body>
+    <form action="example.php" method="POST">
+        <div class="title">
+            <h1>JECA-2024</h1>
+        </div>
+
+        <div class="instructions-section">
+            <h2>Exam Information:</h2>
+            <p><strong>Duration:</strong> 2 Hours</p>
+            <p><strong>Number of MCQs:</strong> 100</p>
+            <p><strong>Full Marks:</strong> 120</p>
+        </div>
+
+        <div class="instructions-section">
+            <h2>Marking Scheme:</h2>
+            <p><strong>Category-1:</strong> Carries 1 mark each and only one option is correct. In case of incorrect answer or any combination of more than one answer, 1/4 mark will be deducted.</p>
+            <p><strong>Category-2:</strong> Carries 2 marks each and one or more option(s) is/are correct. If all correct answers are not marked and no incorrect answer is marked, then score = 2 × number of correct answer marked ÷ actual number of correct answers. If any wrong option is marked or if any combination including a wrong option is marked, the answer will be considered wrong, but there is no negative marking for the same and zero mark will be awarded.</p>
+        </div>
+        <div class="container">
+            <div class="rainbow-text">
+            <span class="letter">G</span>
+            <span class="letter">O</span>
+            <span class="letter">O</span>
+            <span class="letter">D</span>
+            <span class="letter">&nbsp;</span>
+            <span class="letter">L</span>
+            <span class="letter">U</span>
+            <span class="letter">C</span>
+            <span class="letter">K</span>
+            </div>
+        </div>
+
+        <div class="category-header">
+            <h2>Category-1 (Q.1 to 80)</h2>
+            <p>(Carry 1 mark each. Only one option is correct, Negative marks: -1/4)</p>
+        </div>
+
+        <div class="questions">
+            <!-- Question 1 -->
+            <div class="question">
+                <h3>1. What is the output of the following code snippet?</h3>
+                <pre><code class="language-c">#include&lt;stdio.h&gt;
+    main(){
+        int x = 65, *p=&x;
+        void *q=p;
+        char *r=q;
+        printf("%c",*r);
+    }</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A</label>
+                    <label><input type="radio" name="q1" value="B"> Z</label>
+                    <label><input type="radio" name="q1" value="C"> 65</label>
+                    <label><input type="radio" name="q1" value="D"> None of the above</label>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <h3>2. ROM is a </h3>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> Combinational Circuit</label>
+                    <label><input type="radio" name="q2" value="B"> Static Circuit</label>
+                    <label><input type="radio" name="q2" value="C"> Sequential Circuit</label>
+                    <label><input type="radio" name="q2" value="D"> Magnetic Circuit</label>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <h3>3. A computer with a 32 bit wide data bus uses 4 K x 8 static RAM memory chips. The smallest memory this computer is</h3>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> 8 kb</label>
+                    <label><input type="radio" name="q3" value="B"> 16 kb</label>
+                    <label><input type="radio" name="q3" value="C"> 24 kb</label>
+                    <label><input type="radio" name="q3" value="D"> 32 kb</label>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <h3>4. Each stage in pipelining should be completed within ______ cycle(s).</h3>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> 1</label>
+                    <label><input type="radio" name="q4" value="B"> 2</label>
+                    <label><input type="radio" name="q4" value="C"> 3</label>
+                    <label><input type="radio" name="q4" value="D"> 4</label>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <h3>5. Relational calculus is a </h3>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> Procedural language</label>
+                    <label><input type="radio" name="q5" value="B"> Non-Procedural language</label>
+                    <label><input type="radio" name="q5" value="C"> Data definition language</label>
+                    <label><input type="radio" name="q5" value="D"> -- </label>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+                <h3>6. How many parameters does a default constructor require?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> 1</label>
+                    <label><input type="radio" name="q6" value="B"> 2</label>
+                    <label><input type="radio" name="q6" value="C"> 0</label>
+                    <label><input type="radio" name="q6" value="D"> 3</label>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">
+                <h3>7. An artificially intelligent car decreases its speed based on its distance from the car in front of it. Which method is used?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> Naive - Bayes</label>
+                    <label><input type="radio" name="q7" value="B"> Decision Tree</label>
+                    <label><input type="radio" name="q7" value="C"> Linear Regression</label>
+                    <label><input type="radio" name="q7" value="D"> Logistic Regression</label>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+                <h3>8. The keyword friend does not appear in</h3>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> the class allowing access to another class.</label>
+                    <label><input type="radio" name="q8" value="B"> the class desiring access to another class.</label>
+                    <label><input type="radio" name="q8" value="C"> the private section of a class.</label>
+                    <label><input type="radio" name="q8" value="D"> the public section of a class.</label>
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question">
+                <h3>9. What is the maximum number of level-2 DFD possible if the number of processes in level-1 DFD is n?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> 2</label>
+                    <label><input type="radio" name="q9" value="B"> 2<sup>n</sup></label>
+                    <label><input type="radio" name="q9" value="C"> n<sup>2</sup></label>
+                    <label><input type="radio" name="q9" value="D"> n</label>
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question">
+                <h3>10. The small extremely fast RAM's are termed as</h3>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> Heaps</label>
+                    <label><input type="radio" name="q10" value="B"> Accumulators</label>
+                    <label><input type="radio" name="q10" value="C"> Stacks</label>
+                    <label><input type="radio" name="q10" value="D"> Cache</label>
+                </div>
+            </div>
+
+            <!-- Question 11 -->
+            <div class="question">
+                <h3>11. K-means clustering method is an example of which type of clustering method?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q11" value="A"> Hierarchical</label>
+                    <label><input type="radio" name="q11" value="B"> Random</label>
+                    <label><input type="radio" name="q11" value="C"> Density based</label>
+                    <label><input type="radio" name="q11" value="D"> Partitioning</label>
+                </div>
+            </div>
+
+            <!-- Question 12 -->
+            <div class="question">
+                <h3>12. The store and forward mechanism is used in</h3>
+                <div class="options">
+                    <label><input type="radio" name="q12" value="A"> packet switching.</label>
+                    <label><input type="radio" name="q12" value="B"> message switching.</label>
+                    <label><input type="radio" name="q12" value="C"> circuit switching.</label>
+                    <label><input type="radio" name="q12" value="D"> data gram switching.</label>
+                </div>
+            </div>
+
+            <!-- Question 13 -->
+            <div class="question">
+                <h3>13. What is the output of the following C-program?</h3>
+                <pre><code class="language-c">#include&lt;stdio.h&gt;
+    int main()
+    { const int a=10;
+    printf("%d", ++a);
+    return 0;
+    }</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q13" value="A"> 11</label>
+                    <label><input type="radio" name="q13" value="B"> 10</label>
+                    <label><input type="radio" name="q13" value="C"> Compilation Error</label>
+                    <label><input type="radio" name="q13" value="D"> 0</label>
+                </div>
+            </div>
+
+            <!-- Question 14 -->
+            <div class="question">
+                <h3>14. How can you display a list of all files including the hidden files?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q14" value="A"> find all</label>
+                    <label><input type="radio" name="q14" value="B"> find-a</label>
+                    <label><input type="radio" name="q14" value="C"> ls-a</label>
+                    <label><input type="radio" name="q14" value="D"> All of these</label>
+                </div>
+            </div>
+
+            <!-- Question 15 -->
+            <div class="question">
+                <h3>15. Which C keyword is used to extend the visibility of variables?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q15" value="A"> extend</label>
+                    <label><input type="radio" name="q15" value="B"> extends</label>
+                    <label><input type="radio" name="q15" value="C"> extern</label>
+                    <label><input type="radio" name="q15" value="D"> auto</label>
+                </div>
+            </div>
+
+            <!-- Question 16 -->
+            <div class="question">
+                <h3>16. Which of the following should not have transitive dependency?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q16" value="A"> First normal form</label>
+                    <label><input type="radio" name="q16" value="B"> Second normal form</label>
+                    <label><input type="radio" name="q16" value="C"> Third normal form</label>
+                    <label><input type="radio" name="q16" value="D"> Fourth normal form</label>
+                </div>
+            </div>
+
+            <!-- Question 17 -->
+            <div class="question">
+                <h3>17. Regression is a type of:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q17" value="A"> Supervised learning</label>
+                    <label><input type="radio" name="q17" value="B"> Unsupervised learning</label>
+                    <label><input type="radio" name="q17" value="C"> Reinforcement learning</label>
+                    <label><input type="radio" name="q17" value="D"> None of the above</label>
+                </div>
+            </div>
+
+            <!-- Question 18 -->
+            <div class="question">
+                <h3>18. What is the output of the following C-program?</h3>
+                <pre><code class="language-c">#include&lt;stdio.h&gt;
+    #define CUBE(x) (x*x*x)
+    int main()
+    {
+    int a, b=8;
+    a = CUBE(b++);
+    printf("%d, %d\n", a, b);
+    return 0;
+    }</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q18" value="A"> 9, 4</label>
+                    <label><input type="radio" name="q18" value="B"> 27, 4</label>
+                    <label><input type="radio" name="q18" value="C"> 27, 6</label>
+                    <label><input type="radio" name="q18" value="D"> Error</label>
+                </div>
+            </div>
+
+            <!-- Question 19 -->
+            <div class="question">
+                <h3>19. The ____ is an asymmetric key cryptographic algorithm.</h3>
+                <div class="options">
+                    <label><input type="radio" name="q19" value="A"> RSA</label>
+                    <label><input type="radio" name="q19" value="B"> Huffman code</label>
+                    <label><input type="radio" name="q19" value="C"> Mono-alphabetic substitution</label>
+                    <label><input type="radio" name="q19" value="D"> Steganography</label>
+                </div>
+            </div>
+
+            <!-- Question 20 -->
+            <div class="question">
+                <h3>20. What is the purpose of the confusion matrix in machine learning</h3>
+                <div class="options">
+                    <label><input type="radio" name="q20" value="A"> To visualize the distribution of the data in a dataset</label>
+                    <label><input type="radio" name="q20" value="B"> To compare the performance of different models</label>
+                    <label><input type="radio" name="q20" value="C"> To evaluate the performance of a classification model</label>
+                    <label><input type="radio" name="q20" value="D"> To evaluate the performance of a regression model</label>
+                </div>
+            </div>
+
+            <!-- Question 21 -->
+            <div class="question">
+                <h3>21. In DMA transfers, the required signals and addresses are given by the</h3>
+                <div class="options">
+                    <label><input type="radio" name="q21" value="A"> Processor</label>
+                    <label><input type="radio" name="q21" value="B"> Device drivers</label>
+                    <label><input type="radio" name="q21" value="C"> DMA controllers</label>
+                    <label><input type="radio" name="q21" value="D"> The program itself</label>
+                </div>
+            </div>
+
+            <!-- Question 22 -->
+            <div class="question">
+                <h3>22. What is the output of following C code?</h3>
+                <pre><code class="language-c">int main()
+    {
+    int x = 2, y = 1;
+    x *= x+y;
+    printf("%d", x);
+    }</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q22" value="A"> Compilation error</label>
+                    <label><input type="radio" name="q22" value="B"> Varies on Complier</label>
+                    <label><input type="radio" name="q22" value="C"> 5</label>
+                    <label><input type="radio" name="q22" value="D"> 6</label>
+                </div>
+            </div>
+
+            <!-- Question 23 -->
+            <div class="question">
+                <h3>23. Which among the following can't be used for polymorphism?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q23" value="A"> Static member functions</label>
+                    <label><input type="radio" name="q23" value="B"> Member functions overloading</label>
+                    <label><input type="radio" name="q23" value="C"> Predefined operator overloading</label>
+                    <label><input type="radio" name="q23" value="D"> Constructor overloading</label>
+                </div>
+            </div>
+
+            <!-- Question 24 -->
+            <div class="question">
+                <h3>24. If there are 32 segments each of size 1K bytes, then the logical address should have</h3>
+                <div class="options">
+                    <label><input type="radio" name="q24" value="A"> 12 bits</label>
+                    <label><input type="radio" name="q24" value="B"> 13 bits</label>
+                    <label><input type="radio" name="q24" value="C"> 14 bits</label>
+                    <label><input type="radio" name="q24" value="D"> 15 bits</label>
+                </div>
+            </div>
+
+            <!-- Question 25 -->
+            <div class="question">
+                <h3>25. In software engineering the tester does not know the internal designs of the software application in case of ____ testing.</h3>
+                <div class="options">
+                    <label><input type="radio" name="q25" value="A"> White Box</label>
+                    <label><input type="radio" name="q25" value="B"> Black Box</label>
+                    <label><input type="radio" name="q25" value="C"> Beta</label>
+                    <label><input type="radio" name="q25" value="D"> Acceptance</label>
+                </div>
+            </div>
+
+            <!-- Question 26 -->
+            <div class="question">
+                <h3>26. What is the output of the following code snippet?</h3>
+                <pre><code class="language-c">#include <stdio.h>
+    int main()
+    {
+        int x;
+        x=5>8? 10: 1!=2 < 5? 20: 30;
+        printf("%d",x);
+        return 0;
+    }</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q26" value="A"> 5</label>
+                    <label><input type="radio" name="q26" value="B"> 10</label>
+                    <label><input type="radio" name="q26" value="C"> 20</label>
+                    <label><input type="radio" name="q26" value="D"> 30</label>
+                </div>
+            </div>
+
+            <!-- Question 27 -->
+            <div class="question">
+                <h3>27. ____ is a measure of the degree of interdependence between modules.</h3>
+                <div class="options">
+                    <label><input type="radio" name="q27" value="A"> Cohesion</label>
+                    <label><input type="radio" name="q27" value="B"> Coupling</label>
+                    <label><input type="radio" name="q27" value="C"> None of the above mentioned</label>
+                    <label><input type="radio" name="q27" value="D"> Both (A) and (B)</label>
+                </div>
+            </div>
+
+            <!-- Question 28 -->
+            <div class="question">
+                <h3>28. The permission -rwx r--r-- represented in octal expression will be</h3>
+                <div class="options">
+                    <label><input type="radio" name="q28" value="A"> 777</label>
+                    <label><input type="radio" name="q28" value="B"> 744</label>
+                    <label><input type="radio" name="q28" value="C"> 666</label>
+                    <label><input type="radio" name="q28" value="D"> 711</label>
+                </div>
+            </div>
+
+            <!-- Question 29 -->
+            <div class="question">
+                <h3>29. What will be the output of the C code?</h3>
+                <pre><code class="language-c">#include <stdio.h>
+    int main()
+    {
+        int a=1;
+        if(a--)
+            printf("True");
+        if(a++)
+            print("False");
+    }</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q29" value="A"> True</label>
+                    <label><input type="radio" name="q29" value="B"> False</label>
+                    <label><input type="radio" name="q29" value="C"> True False</label>
+                    <label><input type="radio" name="q29" value="D"> No output</label>
+                </div>
+            </div>
+
+            <!-- Question 30 -->
+            <div class="question">
+                <h3>30. Which command changes a file's group owner?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q30" value="A"> cgrp</label>
+                    <label><input type="radio" name="q30" value="B"> group</label>
+                    <label><input type="radio" name="q30" value="C"> change</label>
+                    <label><input type="radio" name="q30" value="D"> chgrp</label>
+                </div>
+            </div>
+
+            <!-- Question 31 -->
+            <div class="question">
+                <h3>31. Which of the following is an example of a classification problem?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q31" value="A"> Predicting the price of a house based on its features</label>
+                    <label><input type="radio" name="q31" value="B"> Predicting the weight of a person based on their height</label>
+                    <label><input type="radio" name="q31" value="C"> Predicting whether a customer will churn or not</label>
+                    <label><input type="radio" name="q31" value="D"> Predicting the age of a person based on their income</label>
+                </div>
+            </div>
+
+            <!-- Question 32 -->
+            <div class="question">
+                <h3>32. What is the output of the C-program?</h3>
+                <pre><code class="language-c">#include<stdio.h>
+    int main()
+    {
+        int i=0;
+        int x=i++;
+        y=++i;
+        printf("%d %d", x, y);
+    }</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q32" value="A"> 0, 2</label>
+                    <label><input type="radio" name="q32" value="B"> 1, 2</label>
+                    <label><input type="radio" name="q32" value="C"> 1, 1</label>
+                    <label><input type="radio" name="q32" value="D"> compile error</label>
+                </div>
+            </div>
+
+            <!-- Question 33 -->
+            <div class="question">
+                <h3>33. What is the difference between supervised and unsupervised learning?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q33" value="A"> Supervised learning requires labelled data while unsupervised learning does not.</label>
+                    <label><input type="radio" name="q33" value="B"> Unsupervised learning requires labelled data while supervised learning does not.</label>
+                    <label><input type="radio" name="q33" value="C"> Supervised learning does not require data while unsupervised learning does.</label>
+                    <label><input type="radio" name="q33" value="D"> There is no difference between supervised and unsupervised learning.</label>
+                </div>
+            </div>
+
+            <!-- Question 34 -->
+            <div class="question">
+                <h3>34. Which of the following feature is shown by function overriding?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q34" value="A"> Abstraction</label>
+                    <label><input type="radio" name="q34" value="B"> Polymorphism</label>
+                    <label><input type="radio" name="q34" value="C"> Encapsulation</label>
+                    <label><input type="radio" name="q34" value="D"> Inheritance</label>
+                </div>
+            </div>
+
+            <!-- Question 35 -->
+            <div class="question">
+                <h3>35. If a file has read and write permission for the owner, then the octal representation of the permissions will be:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q35" value="A"> 7</label>
+                    <label><input type="radio" name="q35" value="B"> 5</label>
+                    <label><input type="radio" name="q35" value="C"> 6</label>
+                    <label><input type="radio" name="q35" value="D"> 3</label>
+                </div>
+            </div>
+
+            <!-- Question 36 -->
+            <div class="question">
+                <h3>36. In an ER diagram, an entity set is represented by a</h3>
+                <div class="options">
+                    <label><input type="radio" name="q36" value="A"> Rectangle</label>
+                    <label><input type="radio" name="q36" value="B"> Ellipse</label>
+                    <label><input type="radio" name="q36" value="C"> Diamond box</label>
+                    <label><input type="radio" name="q36" value="D"> Circle</label>
+                </div>
+            </div>
+
+            <!-- Question 37 -->
+            <div class="question">
+                <h3>37. What is the output of the C-program?</h3>
+                <pre><code class="language-c">#include<stdio.h>
+    int main()
+    {
+        int i=0;
+        while (i=0)
+            printf("\n True");
+        printf("\n False");
+    }</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q37" value="A"> True (infinite time)</label>
+                    <label><input type="radio" name="q37" value="B"> Compiler dependent</label>
+                    <label><input type="radio" name="q37" value="C"> False</label>
+                    <label><input type="radio" name="q37" value="D"> True (1 time)</label>
+                </div>
+            </div>
+
+            <!-- Question 38 -->
+            <div class="question">
+                <h3>38. Identify the incorrect constructor type:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q38" value="A"> Friend Constructor</label>
+                    <label><input type="radio" name="q38" value="B"> Copy Constructor</label>
+                    <label><input type="radio" name="q38" value="C"> Default Constructor</label>
+                    <label><input type="radio" name="q38" value="D"> Parameterized Constructor</label>
+                </div>
+            </div>
+
+            <!-- Question 39 -->
+            <div class="question">
+                <h3>39. ____ specification is also known as the SRS document.</h3>
+                <div class="options">
+                    <label><input type="radio" name="q39" value="A"> White-box</label>
+                    <label><input type="radio" name="q39" value="B"> Grey-box</label>
+                    <label><input type="radio" name="q39" value="C"> Black-box</label>
+                    <label><input type="radio" name="q39" value="D"> None of the above mentioned</label>
+                </div>
+            </div>
+
+            <!-- Question 40 -->
+            <div class="question">
+                <h3>40. What is the output of the following code snippet?</h3>
+                <pre><code class="language-c">main() {
+        int i, k = 5;
+        if(i = k) {
+            printf ("YES\n");
+        }
+        else {
+            printf("NO\n");
+        }
+    }</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q40" value="A"> 5</label>
+                    <label><input type="radio" name="q40" value="B"> YES</label>
+                    <label><input type="radio" name="q40" value="C"> NO</label>
+                    <label><input type="radio" name="q40" value="D"> Will give error</label>
+                </div>
+            </div>
+
+            <!-- Question 41 -->
+            <div class="question">
+                <h3>41. Which of the following(s) is/are not shared by threads?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q41" value="A"> Stack</label>
+                    <label><input type="radio" name="q41" value="B"> Program counter</label>
+                    <label><input type="radio" name="q41" value="C"> Both program counter and stack</label>
+                    <label><input type="radio" name="q41" value="D"> None</label>
+                </div>
+            </div>
+
+            <!-- Question 42 -->
+            <div class="question">
+                <h3>42. Given an unsorted array. The array has this property that every element in the array is at most k distance from its position in a sorted array where k is a positive integer smaller than the size of an array. Which sorting algorithm can be easily modified for sorting this array and what is the obtainable time complexity?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q42" value="A"> Insertion Sort with time complexity O(kn)</label>
+                    <label><input type="radio" name="q42" value="B"> Heap Sort with time complexity O(n log k)</label>
+                    <label><input type="radio" name="q42" value="C"> Quick Sort with time complexity O(k log k)</label>
+                    <label><input type="radio" name="q42" value="D"> Merge Sort with time complexity O(k log k)</label>
+                </div>
+            </div>
+
+            <!-- Question 43 -->
+            <div class="question">
+                <h3>43. Which one of the following is a synchronization tool?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q43" value="A"> Thread</label>
+                    <label><input type="radio" name="q43" value="B"> Pipe</label>
+                    <label><input type="radio" name="q43" value="C"> Semaphore</label>
+                    <label><input type="radio" name="q43" value="D"> Socket</label>
+                </div>
+            </div>
+
+            <!-- Question 44 -->
+            <div class="question">
+                <h3>44. When a process is in a "Blocked" state waiting for some I/O service. When the service is completed, it goes to the</h3>
+                <div class="options">
+                    <label><input type="radio" name="q44" value="A"> Terminated state</label>
+                    <label><input type="radio" name="q44" value="B"> Suspended state</label>
+                    <label><input type="radio" name="q44" value="C"> Running state</label>
+                    <label><input type="radio" name="q44" value="D"> Ready state</label>
+                </div>
+            </div>
+
+            <!-- Question 45 -->
+            <div class="question">
+                <h3>45. A process is thrashing if</h3>
+                <div class="options">
+                    <label><input type="radio" name="q45" value="A"> it spends more time in execution, rather than paging</label>
+                    <label><input type="radio" name="q45" value="B"> it spends more time in paging, rather than in execution</label>
+                    <label><input type="radio" name="q45" value="C"> it has no memory allocated to it</label>
+                    <label><input type="radio" name="q45" value="D"> it indefinitely waits for a resource</label>
+                </div>
+            </div>
+
+            <!-- Question 46 -->
+            <div class="question">
+                <h3>46. ____ is not among the eight principles followed by the Software Code of Ethics and Professional Practice.</h3>
+                <div class="options">
+                    <label><input type="radio" name="q46" value="A"> PRODUCT</label>
+                    <label><input type="radio" name="q46" value="B"> ENVIRONMENT</label>
+                    <label><input type="radio" name="q46" value="C"> PUBLIC</label>
+                    <label><input type="radio" name="q46" value="D"> PROFESSION</label>
+                </div>
+            </div>
+
+            <!-- Question 47 -->
+            <div class="question">
+                <h3>47. Making class members inaccessible to nonmember functions is an example of:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q47" value="A"> polymorphism</label>
+                    <label><input type="radio" name="q47" value="B"> data hiding</label>
+                    <label><input type="radio" name="q47" value="C"> redundancy</label>
+                    <label><input type="radio" name="q47" value="D"> recursion</label>
+                </div>
+            </div>
+
+            <!-- Question 48 -->
+            <div class="question">
+                <h3>48. In a relational database, what does the term "ACID" stand for?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q48" value="A"> Atomicity, Consistency, Integrity, Durability</label>
+                    <label><input type="radio" name="q48" value="B"> Association, Constraint, Index, Database</label>
+                    <label><input type="radio" name="q48" value="C"> Authorization, Compatibility, Isolation, Dependency</label>
+                    <label><input type="radio" name="q48" value="D"> Aggregate, Collection, Inheritance, Design</label>
+                </div>
+            </div>
+
+            <!-- Question 49 -->
+            <div class="question">
+                <h3>49. Which of the given statement is the correct recurrence for the worst case of Binary Search?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q49" value="A"> T(n) = 2T(n/2) + O(1) & T(1) = O(1) = T(0).</label>
+                    <label><input type="radio" name="q49" value="B"> T(n) = T(n - 1) + O(1) & T(1) = O(1) = T(0).</label>
+                    <label><input type="radio" name="q49" value="C"> T(n) = T(n/2) + O(1) & T(1) = T(0) = O(1).</label>
+                    <label><input type="radio" name="q49" value="D"> T(n) = T(n - 2) + O(1) & T(1) = T(0) = O(1).</label>
+                </div>
+            </div>
+            <!-- Questions 50-100 HTML Content -->
+
+            <div class="question">
+                <h3>50. Which of the following statements about primary key in a database table is true?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q50" value="A"> A table can have multiple primary keys.</label>
+                    <label><input type="radio" name="q50" value="B"> A primary key uniquely identifies each record in a table.</label>
+                    <label><input type="radio" name="q50" value="C"> Primary keys can contain NULL values.</label>
+                    <label><input type="radio" name="q50" value="D"> Primary keys are used to establish relationships between tables.</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>51. Which of the following data structure is required to convert an arithmetic expression in infix form to its equivalent postfix form?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q51" value="A"> Queue</label>
+                    <label><input type="radio" name="q51" value="B"> Linked List</label>
+                    <label><input type="radio" name="q51" value="C"> Binary Search Tree</label>
+                    <label><input type="radio" name="q51" value="D"> Stack</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>52. Which is the correct statement about operator overloading?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q52" value="A"> Only arithmetic operators can be overloaded.</label>
+                    <label><input type="radio" name="q52" value="B"> Only non-arithmetic operators can be overloaded.</label>
+                    <label><input type="radio" name="q52" value="C"> Precedence of operators are changed after overloading.</label>
+                    <label><input type="radio" name="q52" value="D"> Associativity and precedence of operators does not change.</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>53. A clustering index is defined on the fields which are of types</h3>
+                <div class="options">
+                    <label><input type="radio" name="q53" value="A"> Non-key and ordering</label>
+                    <label><input type="radio" name="q53" value="B"> Non-key and non-ordering</label>
+                    <label><input type="radio" name="q53" value="C"> Key and ordering</label>
+                    <label><input type="radio" name="q53" value="D"> Key and non-ordering</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>54. Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree. The binary search tree uses usual ordering on natural numbers. What is the in-order traversal sequence of the resultant tree?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q54" value="A"> 7, 5, 1, 0, 3, 2, 4, 6, 8, 9</label>
+                    <label><input type="radio" name="q54" value="B"> 0, 2, 4, 3, 1, 6, 5, 9, 8, 7</label>
+                    <label><input type="radio" name="q54" value="C"> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9</label>
+                    <label><input type="radio" name="q54" value="D"> 9, 8, 6, 4, 2, 3, 0, 1, 5, 7</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>55. Which of the following is popular for applications such as storage of log files in a database management system since it offers the best write performance?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q55" value="A"> RAID level 0</label>
+                    <label><input type="radio" name="q55" value="B"> RAID level 1</label>
+                    <label><input type="radio" name="q55" value="C"> RAID level 2</label>
+                    <label><input type="radio" name="q55" value="D"> RAID level 3</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>56. Which of the following statement is correct?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q56" value="A"> Pre-order traversal of Binary search gives sorted list.</label>
+                    <label><input type="radio" name="q56" value="B"> In-order traversal of Binary search tree gives sorted list.</label>
+                    <label><input type="radio" name="q56" value="C"> Post-order traversal of Binary search tree gives sorted list.</label>
+                    <label><input type="radio" name="q56" value="D"> None of the above.</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>57. Which one of the following is deadlock avoidance algorithm?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q57" value="A"> Elevator algorithm</label>
+                    <label><input type="radio" name="q57" value="B"> Banker's algorithm</label>
+                    <label><input type="radio" name="q57" value="C"> LRU algorithm</label>
+                    <label><input type="radio" name="q57" value="D"> SCAN algorithm</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>58. Which command is used to set the three permissions for all the three categories of users of a file?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q58" value="A"> chgrp</label>
+                    <label><input type="radio" name="q58" value="B"> chown</label>
+                    <label><input type="radio" name="q58" value="C"> chmod</label>
+                    <label><input type="radio" name="q58" value="D"> chusr</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>59. Which command is used for printing the current working directory?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q59" value="A"> dir</label>
+                    <label><input type="radio" name="q59" value="B"> HOME</label>
+                    <label><input type="radio" name="q59" value="C"> cd</label>
+                    <label><input type="radio" name="q59" value="D"> pwd</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>60. When several processes access the same data concurrently and the outcome of the execution depends on the particular order in which the access takes place is called</h3>
+                <div class="options">
+                    <label><input type="radio" name="q60" value="A"> Race condition</label>
+                    <label><input type="radio" name="q60" value="B"> Critical condition</label>
+                    <label><input type="radio" name="q60" value="C"> Virtual condition</label>
+                    <label><input type="radio" name="q60" value="D"> Linear condition</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>61. Baud means</h3>
+                <div class="options">
+                    <label><input type="radio" name="q61" value="A"> The number of bits transmitted per unit time</label>
+                    <label><input type="radio" name="q61" value="B"> The number of bytes transmitted per unit time</label>
+                    <label><input type="radio" name="q61" value="C"> The rate at which the signal changes</label>
+                    <label><input type="radio" name="q61" value="D"> None of the above</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>62. Which option will be used with sort command to start sorting after the nth column of the (m + 1)th field?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q62" value="A"> -mn</label>
+                    <label><input type="radio" name="q62" value="B"> +m In</label>
+                    <label><input type="radio" name="q62" value="C"> +n m+1</label>
+                    <label><input type="radio" name="q62" value="D"> +(m + 1) u</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>63. Which layer of the OSI model is responsible for routing and forwarding packets?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q63" value="A"> Network Layer (Layer 3)</label>
+                    <label><input type="radio" name="q63" value="B"> Transport Layer (Layer 4)</label>
+                    <label><input type="radio" name="q63" value="C"> Data Link Layer (Layer 2)</label>
+                    <label><input type="radio" name="q63" value="D"> Physical Layer (Layer 1)</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>64. Which command is used for displaying the beginning of a file in Unix?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q64" value="A"> lp</label>
+                    <label><input type="radio" name="q64" value="B"> begin</label>
+                    <label><input type="radio" name="q64" value="C"> pr</label>
+                    <label><input type="radio" name="q64" value="D"> head</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>65. Consider three CPU-intensive processes, which require 10, 20 and 30 time units and arrive at times 0, 2 and 6 respectively. How many context switches are needed if the operating system implements a shortest remaining time first scheduling algorithm? Do not count the context switches at time zero and at the end.</h3>
+                <div class="options">
+                    <label><input type="radio" name="q65" value="A"> 1</label>
+                    <label><input type="radio" name="q65" value="B"> 2</label>
+                    <label><input type="radio" name="q65" value="C"> 3</label>
+                    <label><input type="radio" name="q65" value="D"> 4</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>66. What is the result of the following postfix expression? ab*cd* + where a=2, b=2, c=3, d=4.</h3>
+                <div class="options">
+                    <label><input type="radio" name="q66" value="A"> 16</label>
+                    <label><input type="radio" name="q66" value="B"> 12</label>
+                    <label><input type="radio" name="q66" value="C"> 14</label>
+                    <label><input type="radio" name="q66" value="D"> 10</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>67. Which one of the following does not have a Net ID and Host Id?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q67" value="A"> Class A</label>
+                    <label><input type="radio" name="q67" value="B"> Class B</label>
+                    <label><input type="radio" name="q67" value="C"> Class C</label>
+                    <label><input type="radio" name="q67" value="D"> Class D</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>68. Which command is used to extract specific columns from the file</h3>
+                <div class="options">
+                    <label><input type="radio" name="q68" value="A"> cat</label>
+                    <label><input type="radio" name="q68" value="B"> cut</label>
+                    <label><input type="radio" name="q68" value="C"> grep</label>
+                    <label><input type="radio" name="q68" value="D"> paste</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>69. In the OSI model, encryption and decryption are functions of the</h3>
+                <div class="options">
+                    <label><input type="radio" name="q69" value="A"> Transport Layer</label>
+                    <label><input type="radio" name="q69" value="B"> Session Layer</label>
+                    <label><input type="radio" name="q69" value="C"> Presentation Layer</label>
+                    <label><input type="radio" name="q69" value="D"> Application Layer</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>70. Which of the following is not a communication command?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q70" value="A"> write</label>
+                    <label><input type="radio" name="q70" value="B"> mesg</label>
+                    <label><input type="radio" name="q70" value="C"> mail</label>
+                    <label><input type="radio" name="q70" value="D"> grep</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>71. A deadlock avoidance algorithm dynamically examines the ________ to ensure that a circular wait condition can never exist.</h3>
+                <div class="options">
+                    <label><input type="radio" name="q71" value="A"> Operating system</label>
+                    <label><input type="radio" name="q71" value="B"> Resources</label>
+                    <label><input type="radio" name="q71" value="C"> System Storage State</label>
+                    <label><input type="radio" name="q71" value="D"> Resource Allocation State</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>72. A Port address in TCP/IP is ________ bits long.</h3>
+                <div class="options">
+                    <label><input type="radio" name="q72" value="A"> 32</label>
+                    <label><input type="radio" name="q72" value="B"> 48</label>
+                    <label><input type="radio" name="q72" value="C"> 16</label>
+                    <label><input type="radio" name="q72" value="D"> None of the above</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>73. What is the worst case time complexity of inserting an elements into an empty linear linked list, if it needs to be maintained in sorted order after every insertion?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q73" value="A"> O(n)</label>
+                    <label><input type="radio" name="q73" value="B"> O(n log n)</label>
+                    <label><input type="radio" name="q73" value="C"> O(n²)</label>
+                    <label><input type="radio" name="q73" value="D"> O(1)</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>74. In IPV4 network ID and host ID in class A</h3>
+                <div class="options">
+                    <label><input type="radio" name="q74" value="A"> 8 bits. network ID, 24 bits host ID.</label>
+                    <label><input type="radio" name="q74" value="B"> 24 bits. network ID, 8 bits host ID.</label>
+                    <label><input type="radio" name="q74" value="C"> 14 bits. network ID, 16 bits host ID.</label>
+                    <label><input type="radio" name="q74" value="D"> 16 bits. network ID, 14 bits host ID.</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>75. What is the worst case complexity of inserting a node in doubly linked list?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q75" value="A"> O(log n)</label>
+                    <label><input type="radio" name="q75" value="B"> O(n)</label>
+                    <label><input type="radio" name="q75" value="C"> O(n log n)</label>
+                    <label><input type="radio" name="q75" value="D"> O(1)</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>76. Virtual memory is normally implemented by</h3>
+                <div class="options">
+                    <label><input type="radio" name="q76" value="A"> Demand Paging</label>
+                    <label><input type="radio" name="q76" value="B"> Buses</label>
+                    <label><input type="radio" name="q76" value="C"> Virtualization</label>
+                    <label><input type="radio" name="q76" value="D"> All of the above mentioned methods</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>77. Which of the following sorting algorithm will be the most efficient if the elements are already in sorted order?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q77" value="A"> Bubble sort</label>
+                    <label><input type="radio" name="q77" value="B"> Selection sort</label>
+                    <label><input type="radio" name="q77" value="C"> Insertion sort</label>
+                    <label><input type="radio" name="q77" value="D"> Merge sort</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>78. ________ server is used to create a secure tunnel connection.</h3>
+                <div class="options">
+                    <label><input type="radio" name="q78" value="A"> Radius</label>
+                    <label><input type="radio" name="q78" value="B"> VPN</label>
+                    <label><input type="radio" name="q78" value="C"> Proxy</label>
+                    <label><input type="radio" name="q78" value="D"> DNS</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>79. What is the prefix of the following expression A-B/(C*D^E)?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q79" value="A"> -A/B*C^DE</label>
+                    <label><input type="radio" name="q79" value="B"> -A/BC*ADE</label>
+                    <label><input type="radio" name="q79" value="C"> -ABCD*^DE</label>
+                    <label><input type="radio" name="q79" value="D"> -/*^ACBDE</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>80. Hamming code is used for</h3>
+                <div class="options">
+                    <label><input type="radio" name="q80" value="A"> Error detection</label>
+                    <label><input type="radio" name="q80" value="B"> Error correction</label>
+                    <label><input type="radio" name="q80" value="C"> Error encapsulation</label>
+                    <label><input type="radio" name="q80" value="D"> Both Error detection and correction</label>
+                </div>
+            </div>
+        
+
+        <div class="category-header">
+            <h2>Category-2 (Q.81 to 100)</h2>
+            <p>(Carry 2 marks each. One or more options are correct. Partial marks as per scheme.)</p>
+        </div>
+
+        <!-- Category-2 (Multiple Correct Answers) -->
+        <div class="category-header">
+            <h2>Category-2 (Q. 81 to 100)</h2>
+            <p>(Carry 2 marks each. One or more options are correct. No negative marks)</p>
+        </div>
+
+        <div class="question">
+            <h3>81. Which of the following(s) are not type of inheritance?</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q81" value="A"> Hierarchical Inheritance</label>
+                <label><input type="checkbox" name="q81" value="B"> Linear Inheritance</label>
+                <label><input type="checkbox" name="q81" value="C"> Multilevel Inheritance</label>
+                <label><input type="checkbox" name="q81" value="D"> Distributed Inheritance</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>82. There are three IP addresses as given below: X = 202.28.14.150, Y = 168.19.200.12, Z = 72.192.52.210. Which of the following statements is correct?</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q82" value="A"> X is Class A, Y is class B, Z is class C</label>
+                <label><input type="checkbox" name="q82" value="B"> X is Class C. Y is class A, Z is class B</label>
+                <label><input type="checkbox" name="q82" value="C"> X is Class A, Y is class C, Z is class B</label>
+                <label><input type="checkbox" name="q82" value="D"> X is Class C, Y is class B, Z is class A</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>83. A process refers to 5 pages namely A, B, C, D and E in the order: "A, B, C, D, A, B, E, A, B, C, D, E". If the page replacement algorithm is FIFO, the number of page transfers with an empty internal store of 3 frames is</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q83" value="A"> 8</label>
+                <label><input type="checkbox" name="q83" value="B"> 10</label>
+                <label><input type="checkbox" name="q83" value="C"> 9</label>
+                <label><input type="checkbox" name="q83" value="D"> 7</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>84. What are non-linear data structure?</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q84" value="A"> Graph</label>
+                <label><input type="checkbox" name="q84" value="B"> Linked List</label>
+                <label><input type="checkbox" name="q84" value="C"> Queue</label>
+                <label><input type="checkbox" name="q84" value="D"> Tree</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>85. Relation R has eight attributes ABCDEFGH. Field of R contain only atomic values. X = {C→HG, A→BC, B→CFH, E→A, F→EG} is a set of Functional Dependencies (FD's) so that Ft is exactly the set of FD's that hold for R. How many candidate keys does the relation R have?</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q85" value="A"> 3</label>
+                <label><input type="checkbox" name="q85" value="B"> 4</label>
+                <label><input type="checkbox" name="q85" value="C"> 5</label>
+                <label><input type="checkbox" name="q85" value="D"> 6</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>86. What are the valid shells in linux?</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q86" value="A"> Kernel shell</label>
+                <label><input type="checkbox" name="q86" value="B"> C shell</label>
+                <label><input type="checkbox" name="q86" value="C"> Vi shell</label>
+                <label><input type="checkbox" name="q86" value="D"> Korn shell</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>87. What are the valid layers of OSI model?</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q87" value="A"> Internet layer</label>
+                <label><input type="checkbox" name="q87" value="B"> Transport layer</label>
+                <label><input type="checkbox" name="q87" value="C"> Data Link layer</label>
+                <label><input type="checkbox" name="q87" value="D"> Session layer</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>88. A subnet has been assigned a subnet mask of 255.255.255.192. What is the maximum number of hosts that can belong to this subnet?</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q88" value="A"> 14</label>
+                <label><input type="checkbox" name="q88" value="B"> 30</label>
+                <label><input type="checkbox" name="q88" value="C"> 62</label>
+                <label><input type="checkbox" name="q88" value="D"> 126</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>89. Identify the incorrect phase of STLC (Software Testing Life Cycle).</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q89" value="A"> Test Closure</label>
+                <label><input type="checkbox" name="q89" value="B"> Coding</label>
+                <label><input type="checkbox" name="q89" value="C"> Requirement Analysis</label>
+                <label><input type="checkbox" name="q89" value="D"> Test Planning</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>90. For which one of the following reasons does Internet Protocol (IP) use the time-to-live (TTL) field in the IP datagram header?</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q90" value="A"> Ensure packets reach destination within that time.</label>
+                <label><input type="checkbox" name="q90" value="B"> Discard packets that reach later than that time.</label>
+                <label><input type="checkbox" name="q90" value="C"> Prevent packets from looping indefinitely.</label>
+                <label><input type="checkbox" name="q90" value="D"> Limit the time for which a packet gets queued in intermediate router.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>91. Which of the following is not supervised learning?</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q91" value="A"> PCA</label>
+                <label><input type="checkbox" name="q91" value="B"> Naive Bayesian</label>
+                <label><input type="checkbox" name="q91" value="C"> Linear Regression</label>
+                <label><input type="checkbox" name="q91" value="D"> Decision Tree</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>92. Which of the following statements is not true about the pruning in the decision tree?</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q92" value="A"> When the decision tree is created, many of the branches will reflect anomalies in the training data due to noise.</label>
+                <label><input type="checkbox" name="q92" value="B"> The over fitting happens when the learning algorithm continues to develop hypothesis that reduce training set error at the cost of increased test set errors.</label>
+                <label><input type="checkbox" name="q92" value="C"> It optimizes the computational efficiency.</label>
+                <label><input type="checkbox" name="q92" value="D"> It reduces the classification accuracy.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>93. If 2 classes derive one base class and redefine a function of base class, also overload some operators inside class body. Among these two things of function and operator overloading, where is polymorphism used?</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q93" value="A"> Function overloading only</label>
+                <label><input type="checkbox" name="q93" value="B"> Operator overloading only</label>
+                <label><input type="checkbox" name="q93" value="C"> Both (A) and (B) are using polymorphism</label>
+                <label><input type="checkbox" name="q93" value="D"> Either function overloading or operator overloading because polymorphism can be applied only once in a program</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>94. What is the output of the following C-program?</h3>
+            <pre><code class="language-c">#include&lt;stdio.h&gt;<br>
+    int main()<br>
+    { int a = 20;<br>
+    printf ("CINEMA");<br>
+    return 1;<br>
+    printf ("DINOSAUR");<br>
+    return 1;<br>
+    }</code></pre>
+            <div class="options">
+                <label><input type="checkbox" name="q94" value="A"> CINEMA DINOSAUR</label>
+                <label><input type="checkbox" name="q94" value="B"> CINEMA</label>
+                <label><input type="checkbox" name="q94" value="C"> DINOSAUR</label>
+                <label><input type="checkbox" name="q94" value="D"> Compilation error</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>95. A CPU generates 32-bit virtual addresses. The page size is 4 KB. The processor has a translation look-aside buffer (TLB) which can hold a total of 128 page table entries and is 4-way set associative. The minimum size of the TLB tag is:</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q95" value="A"> 11 bits</label>
+                <label><input type="checkbox" name="q95" value="B"> 13 bits</label>
+                <label><input type="checkbox" name="q95" value="C"> 15 bits</label>
+                <label><input type="checkbox" name="q95" value="D"> 20 bits</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>96. Which of the following statements about polymorphism in C++ are correct?</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q96" value="A"> Polymorphism allows a function to perform different tasks based on the object that invokes it.</label>
+                <label><input type="checkbox" name="q96" value="B"> C++ supports compile-time polymorphism through function overloading and runtime polymorphism through virtual functions.</label>
+                <label><input type="checkbox" name="q96" value="C"> Polymorphism is achieved by hiding the implementation details of a class.</label>
+                <label><input type="checkbox" name="q96" value="D"> In C++, polymorphism can only be achieved through inheritance.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>97. What is the return value of f(p,p), if ther value p is initialized to 5 before the call?</h3>
+            <pre><code>int f(int &x, int c){
+    c = c - 1;
+    int (c==0) return 1;
+    x = x + 1;
+    return f(x,c) * x;            
+    }
+            </code></pre>
+            <div class="options">
+                <label><input type="checkbox" name="q97" value="A">3024</label>
+                <label><input type="checkbox" name="q97" value="B">6561</label>
+                <label><input type="checkbox" name="q97" value="C">55440</label>
+                <label><input type="checkbox" name="q97" value="D">161051</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>98. What could be the optimal page replacement algorithm?</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q98" value="A">Replace the page that has not been used for a long time.</label>
+                <label><input type="checkbox" name="q98" value="B">Replace the page that has been used for a long time.</label>
+                <label><input type="checkbox" name="q98" value="C">Replace the page that will not be used for a long time.</label>
+                <label><input type="checkbox" name="q98" value="D">None of the above mentioned policies.</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>99. If memory access takes 20ns with cache and 110 ns without cache, then the hit-ratio (cache uses a 10ns memory) is:</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q9100" value="A">87%</label>
+                <label><input type="checkbox" name="q9100" value="B">88%</label>
+                <label><input type="checkbox" name="q9100" value="C">90%</label>
+                <label><input type="checkbox" name="q9100" value="D">93%</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>100. What is the full form of PERT and CPM in Software Engineering?</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q100" value="A">Project Evalution and Review Technique; Computer Program Management</label>
+                <label><input type="checkbox" name="q100" value="B">Program Evalution and Review Tracking; Code Performance Monitoring</label>
+                <label><input type="checkbox" name="q100" value="C">Project Execution and Resource Tracking; Code Performance Monitoring</label>
+                <label><input type="checkbox" name="q100" value="D">Program Execution and Regression Testing; Continuous Process Modeling</label>
+            </div>
+        </div>
+        <div class="submit-section">
+            <button type="submit" class="submit-button">Calculate Score</button>
+        </div>
+    </form>
+
+    <!-- Prism.js Script for code highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+    <script>
+        function createSparkles() {
+          const container = document.querySelector('.container');
+          const containerRect = container.getBoundingClientRect();
+          
+          for (let i = 0; i < 20; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            
+            // Random size between 3px and 6px
+            const size = Math.random() * 3 + 3;
+            sparkle.style.width = `${size}px`;
+            sparkle.style.height = `${size}px`;
+            
+            // Random position around the text
+            const left = Math.random() * containerRect.width;
+            const top = Math.random() * containerRect.height;
+            sparkle.style.left = `${containerRect.left + left}px`;
+            sparkle.style.top = `${containerRect.top + top}px`;
+            
+            // Random animation delay
+            sparkle.style.animationDelay = `${Math.random() * 2}s`;
+            
+            document.body.appendChild(sparkle);
+            
+            // Remove sparkle after one animation cycle
+            setTimeout(() => {
+              sparkle.remove();
+            }, 1500);
+          }
+        }
+        
+        // Create new sparkles regularly
+        setInterval(createSparkles, 300);
+        
+        // Initial sparkles
+        createSparkles();
+      </script>
+</body>
+</html>
