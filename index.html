@@ -181,6 +181,186 @@
         .submit-button:hover {
             background-color: #3fa544;
         }
+
+        /* Import professional font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+        /* Professional timer container styling */
+        .timer-container {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+        width: 220px;
+        z-index: 1000;
+        font-family: 'Inter', sans-serif;
+        transition: all 0.3s ease;
+        }
+
+        /* Header styling */
+        .timer-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        color: #333333;
+        }
+
+        .timer-icon {
+        margin-right: 8px;
+        color: #2c5282;
+        }
+
+        .timer-title {
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #2c5282;
+        }
+
+        /* Timer display */
+        .timer-display {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 600;
+        color: #2d3748;
+        margin: 10px 0;
+        padding: 8px 0;
+        border-radius: 6px;
+        background-color: #f7fafc;
+        border: 1px solid #edf2f7;
+        }
+
+        /* Progress bar styling */
+        .progress-container {
+        width: 100%;
+        height: 6px;
+        background-color: #edf2f7;
+        border-radius: 3px;
+        margin: 12px 0;
+        overflow: hidden;
+        }
+
+        .progress-bar {
+        height: 100%;
+        width: 100%;
+        background: #4299e1;
+        border-radius: 3px;
+        transition: width 1s linear;
+        }
+
+        /* Start test button styling */
+        .start-test-btn {
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #ffffff;
+        background-color: #2c5282;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        }
+
+        .start-test-btn:hover {
+        background-color: #2b6cb0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .start-test-btn:active {
+        transform: translateY(1px);
+        }
+
+        .start-test-btn:disabled {
+        background-color: #cbd5e0;
+        cursor: not-allowed;
+        }
+
+        /* Warning state styles */
+        .timer-warning .timer-display {
+        color: #e53e3e;
+        background-color: #fff5f5;
+        border-color: #fed7d7;
+        }
+
+        .timer-warning .progress-bar {
+        background-color: #e53e3e;
+        }
+
+        .timer-warning {
+        animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+        0% {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        50% {
+            box-shadow: 0 4px 12px rgba(229, 62, 62, 0.3);
+        }
+        100% {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        }
+
+        /* Test ended overlay */
+        .test-ended-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1001;
+        align-items: center;
+        justify-content: center;
+        }
+
+        .test-ended-message {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        text-align: center;
+        max-width: 400px;
+        width: 90%;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .test-ended-message h2 {
+        margin-top: 0;
+        color: #2d3748;
+        }
+
+        .test-ended-message p {
+        margin-bottom: 20px;
+        color: #4a5568;
+        }
+
+        .test-ended-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+        background-color: #2c5282;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        }
+
+        .test-ended-btn:hover {
+        background-color: #2b6cb0;
+        }
     </style>
 </head>
 <body>
@@ -189,7 +369,29 @@
         <div class="title">
             <h1>JECA-2024</h1>
         </div>
+        <!-- HTML For Timer (add to your body section) -->
+        <div class="timer-container" id="timer-container">
+        <div class="timer-header">
+            <span class="timer-icon">⏱️</span>
+            <span class="timer-title">Remaining Time</span>
+        </div>
+        <div class="timer-display" id="timer">02:00:00</div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <button class="start-test-btn" id="start-test-btn">
+            <span>Start Test</span>
+        </button>
+        </div>
 
+        <!-- Test Ended Overlay -->
+        <div class="test-ended-overlay" id="test-ended-overlay">
+        <div class="test-ended-message">
+            <h2>Time's Up!</h2>
+            <p>Your test has ended as the allotted time has expired.</p>
+            <button class="test-ended-btn" id="close-overlay-btn">Close</button>
+        </div>
+        </div>
         <div class="instructions-section">
             <h2>Exam Information:</h2>
             <p><strong>Duration:</strong> 2 Hours</p>
@@ -1407,5 +1609,109 @@ int f(int &x, int c){
       </script>
     <!-- JavaScript -->
     <script src="score-calculator.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Initialize timer variables
+          const totalSeconds = 3; // 2 hours = 7200 seconds
+          let remainingSeconds = totalSeconds;
+          let timerInterval = null;
+          let isRunning = false;
+          
+          // Get DOM elements
+          const timerElement = document.getElementById('timer');
+          const timerContainer = document.getElementById('timer-container');
+          const startTestBtn = document.getElementById('start-test-btn');
+          const progressBar = document.getElementById('progress-bar');
+          const testEndedOverlay = document.getElementById('test-ended-overlay');
+          const closeOverlayBtn = document.getElementById('close-overlay-btn');
+          
+          // Form elements (replace with your actual form ID)
+          const testForm = document.querySelector('form') || document; // Fallback to document if no form
+          const submitButton = document.querySelector('button[type="submit"]') || 
+                               document.querySelector('input[type="submit"]');
+          
+          // Initialize timer display
+          updateTimerDisplay();
+          
+          // Event listeners
+          startTestBtn.addEventListener('click', startTest);
+          closeOverlayBtn.addEventListener('click', closeOverlay);
+          
+          function startTest() {
+            if (isRunning) return;
+            
+            // Start the timer
+            isRunning = true;
+            startTestBtn.disabled = true;
+            startTestBtn.textContent = 'Test in Progress';
+            
+            timerInterval = setInterval(function() {
+              // Decrease time
+              remainingSeconds--;
+              
+              if (remainingSeconds <= 0) {
+                // Timer completed - End the test
+                endTest();
+                return;
+              }
+              
+              // Update progress bar
+              const progressPercentage = (remainingSeconds / totalSeconds) * 100;
+              progressBar.style.width = progressPercentage + '%';
+              
+              // Update visual warning at 10 minutes remaining
+              if (remainingSeconds <= 600 && !timerContainer.classList.contains('timer-warning')) {
+                timerContainer.classList.add('timer-warning');
+              }
+              
+              updateTimerDisplay();
+            }, 1000);
+          }
+          
+          function endTest() {
+            // Stop the timer
+            clearInterval(timerInterval);
+            
+            // Update display
+            timerElement.textContent = "00:00:00";
+            progressBar.style.width = '0%';
+            
+            // Display test ended overlay
+            testEndedOverlay.style.display = 'flex';
+            
+            // Disable all form inputs and submit button
+            if (submitButton) {
+              submitButton.disabled = true;
+            }
+            
+            // Disable all form inputs (optional)
+            // const inputs = testForm.querySelectorAll('input, textarea, select, button');
+            // inputs.forEach(input => {
+            //   input.disabled = true;
+            // });
+            
+            // Optional: Auto-submit the form
+            // if (testForm.tagName === 'FORM') {
+            //    testForm.submit();
+            // }
+          }
+          
+          function closeOverlay() {
+            testEndedOverlay.style.display = 'none';
+          }
+          
+          function updateTimerDisplay() {
+            const hours = Math.floor(remainingSeconds / 3600);
+            const minutes = Math.floor((remainingSeconds % 3600) / 60);
+            const seconds = remainingSeconds % 60;
+            
+            const displayHours = String(hours).padStart(2, '0');
+            const displayMinutes = String(minutes).padStart(2, '0');
+            const displaySeconds = String(seconds).padStart(2, '0');
+            
+            timerElement.textContent = `${displayHours}:${displayMinutes}:${displaySeconds}`;
+          }
+        });
+      </script>
 </body>
 </html>
